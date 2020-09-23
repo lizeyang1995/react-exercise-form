@@ -5,16 +5,10 @@ class Gender extends Component {
     return (
       <label>
         <h2>Gender</h2>
-        <input
-          list='gender'
-          type='text' 
-          name='gender'
-          defaultValue='Male'
-        />
-        <datalist id='gender'>
+        <select name='gender' onChange={this.props.onChange} value={this.props.value}>
           <option>Male</option>
           <option>Female</option>
-        </datalist>
+        </select>
       </label>
     );
   }

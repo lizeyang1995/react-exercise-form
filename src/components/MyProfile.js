@@ -2,14 +2,17 @@ import React, {Component} from 'react';
 import './myProfile.less';
 import Name from './Name';
 import Gender from './Gender';
+import Description from './Description';
 
 class MyProfile extends Component {
   state = {
-    name: ''
+    name: '',
+    gender: '',
+    description: ''
   }
   handleChange = (event) => {
     this.setState({
-      name: event.target.value
+      [event.target.name]: event.target.value
     })
   }
   render() {
@@ -17,7 +20,8 @@ class MyProfile extends Component {
       <form>
         <h1>My Profile</h1>
         <Name onChange={this.handleChange} value={this.state.name} />
-        <Gender />
+        <Gender onChange={this.handleChange} value={this.state.gender} />
+        <Description onChange={this.handleChange} value={this.state.description} />
       </form>
     );
   }
