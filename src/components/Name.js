@@ -9,12 +9,11 @@ class Name extends Component {
           type='text' 
           name='name' 
           onChange={this.props.onChange}
+          placeholder='You name'
           value={this.props.value}
         />
       </label>
     );
   }
 }
-
 export default Name;
-
