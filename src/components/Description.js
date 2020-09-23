@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
+import './description.less';
 
 class Description extends Component {
   render() {
     return (
       <label>
         <h2>Description</h2>
-        <textarea 
+        <textarea
+          className='description'
           type='text' 
           name='description' 
           onChange={this.props.onChange}
