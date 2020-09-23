@@ -10,13 +10,26 @@ class MyProfile extends Component {
   state = {
     name: '',
     gender: 'Male',
-    description: ''
+    description: '',
+    isRead: true,
   }
 
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value
     })
+  }
+
+  handleReadChange = (event) => {
+    if (event.target.checked) {
+      this.setState({
+        isRead: true,
+      })
+    } else {
+      this.setState({
+        isRead: false,
+      })
+    }
   }
 
   handleSubmit = (event) => {
@@ -31,8 +44,8 @@ class MyProfile extends Component {
         <Name onChange={this.handleChange} value={this.state.name} />
         <Gender onChange={this.handleChange} value={this.state.gender} />
         <Description onChange={this.handleChange} value={this.state.description} />
-        <Conduct />
-        <Submit />
+        <Conduct onChange={this.handleReadChange} />
+        <Submit value={this.state} />
       </form>
     );
   }

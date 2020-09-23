@@ -7,6 +7,8 @@ class Conduct extends Component {
         <input 
           type='checkbox' 
           name='read'
+          onChange={this.props.onChange}
+          defaultChecked={true}
         />
         <span>I have read the terms of conduct</span>
       </label>
