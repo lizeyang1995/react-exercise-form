@@ -3,6 +3,7 @@ import './myProfile.less';
 import Name from './Name';
 import Gender from './Gender';
 import Description from './Description';
+import Conduct from './Conduct';
 
 class MyProfile extends Component {
   state = {
@@ -22,6 +23,7 @@ class MyProfile extends Component {
         <Name onChange={this.handleChange} value={this.state.name} />
         <Gender onChange={this.handleChange} value={this.state.gender} />
         <Description onChange={this.handleChange} value={this.state.description} />
+        <Conduct />
       </form>
     );
   }
