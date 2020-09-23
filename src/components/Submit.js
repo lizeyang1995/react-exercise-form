@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
+import './submit.less';
 
 class Submit extends Component {
   render() {
     return (
-      <input 
+      <input
+        className='submit'
         type='submit'
         name='name'
         value='Submit'
@@ -13,7 +14,4 @@ class Submit extends Component {
     );
   }
 }
-Submit.propTypes = {
-  name: PropTypes.string,
-};
 export default Submit;

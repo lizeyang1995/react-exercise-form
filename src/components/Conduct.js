@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
+import './conduct.less';
 
 class Conduct extends Component {
   render() {
     return (
       <label>
-        <input 
+        <input
+          className='checkbox'
           type='checkbox' 
           name='read'
           onChange={this.props.onChange}
